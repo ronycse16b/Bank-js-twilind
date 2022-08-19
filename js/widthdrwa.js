@@ -1,4 +1,7 @@
-document.getElementById("withdraw-btn").addEventListener("click", function () {
+
+document.getElementById("withdraw-btn").addEventListener("click", function () 
+
+{
     const withdarwFild = document.getElementById("withdraw-fild");
     const newWithdarw = withdarwFild.value;
     const withdrawReady = parseFloat(newWithdarw);
@@ -12,7 +15,6 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
 
     const newWithdrawTotal = withdrawReady + previousWithdrawTotal;
 
-    withTotalElement.innerText = newWithdrawTotal;
 
 
     //   total blance
@@ -20,13 +22,16 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
 
     const previousBlanceString = withTotalElementBlance.innerText;
     const previousBlanceTotal = parseFloat(previousBlanceString);
-    const newblanceTotal = withdrawReady - previousBlanceTotal;
 
 
     if (withdrawReady > previousBlanceTotal) {
         alert("You Dont Have Sufficiant Blance");
 
     } else {
+        
+        const newblanceTotal = previousBlanceTotal - withdrawReady;
+
+        withTotalElement.innerText = newWithdrawTotal;
         withTotalElementBlance.innerText = newblanceTotal;
     }
 
