@@ -15,6 +15,6 @@ document.getElementById("sign-btn").addEventListener('click',function(){
         console.log("wellcom");
         window.location.href = "dashboard.html";
     }else{
-        console.log("you are not a user ");}
+        alert("you are not a user ");}
 
 })
